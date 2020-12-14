@@ -1,6 +1,6 @@
 // Solidity files have to start with this pragma.
 // It will be used by the Solidity compiler to validate its version.
-pragma solidity ^0.7.0;
+pragma solidity ^0.5.16;
 
 
 // This is the main building block for smart contracts.
@@ -24,7 +24,7 @@ contract Token {
      *
      * The `constructor` is executed only once when the contract is created.
      */
-    constructor() {
+    constructor() public {
         // The totalSupply is assigned to transaction sender, which is the account
         // that is deploying the contract.
         balances[msg.sender] = totalSupply;
